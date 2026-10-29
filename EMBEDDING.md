@@ -6,7 +6,7 @@ Deploy the game’s HTML, CSS, JavaScript modules, `levels.js`, and `icon.svg` t
 
 ```html
 <iframe
-  src="https://ashintop.github.io/halloween-mirror-hearts/#room=1"
+  src="https://halloween-mirror-hearts.crazy3d.org/#room=1"
   title="Moonlit Mirrors"
   width="100%"
   height="521"
@@ -17,7 +17,7 @@ Deploy the game’s HTML, CSS, JavaScript modules, `levels.js`, and `icon.svg` t
 ></iframe>
 ```
 
-Give the iframe’s parent an explicit height. The example is the intended GitHub Pages path; the collection owner verifies actual publication separately. ES modules require HTTP(S), not a direct `file://` opening.
+Give the iframe’s parent an explicit height. The example uses the live Cloudflare game URL. ES modules require HTTP(S), not a direct `file://` opening.
 
 ## Host-sized layout
 
@@ -26,6 +26,8 @@ The Love Game stage has an approximately 833×521 desktop viewport. On phones th
 Moonlit Mirrors always uses a compact viewport-first layout. `?embed=1` is not required; including it is harmless. A `ResizeObserver` sizes each 5×5 board to the available window interior. Both boards remain side by side so the reflection relationship is visible. Short frames hide the decorative brand and bottom journey strip while retaining room selection, move counts, help, sound, language, undo, hint, restart, all four movement buttons, and the center mirror control.
 
 At 326×280 the board cells are necessarily small. The direction buttons remain the primary touch controls. A 480 px or taller phone stage is recommended for more comfortable reading and illustration detail when the host can provide it. Avoid imposing that minimum on a shorter landscape viewport; retain compact mode or use the host’s fullscreen view instead. Help and win dialogs scroll within the frame when needed.
+
+The win dialog contains a finite 2.8-second SVG reunion: the two ghosts approach, hug and share a gentle kiss, then hold their embrace. It is decoration only; next-room, share and close controls are usable immediately. Short viewports use a smaller scene and side-by-side action buttons; the dialog itself can scroll if translated text or a shared URL needs more space. `prefers-reduced-motion: reduce` shows a still embrace. No animation timers, network assets or parent-frame hooks are added for this scene.
 
 The game does not inspect or mutate the parent DOM, request a different iframe height, or require parent messaging. Browser-size acceptance is distinct from testing on physical phones and should include the host’s actual toolbar and orientation changes.
 

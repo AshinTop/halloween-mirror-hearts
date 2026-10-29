@@ -2,11 +2,11 @@
 
 **Two little ghosts. One magical reflection. A dozen ways to find each other.** Moonlit Mirrors is a free Halloween puzzle game from Midnight Candy Club, created as a seasonal companion for [Love Game](https://love-game.org/). Move Luna and Rose at the same time through paired rooms, use walls to bring their paths into alignment, and guide both ghosts to their heart-shaped doorways.
 
-**[GitHub Pages deployment target](https://ashintop.github.io/halloween-mirror-hearts/)** · [Embedding guide](EMBEDDING.md) · [Game design](DESIGN.md)
+**[Play online](https://halloween-mirror-hearts.crazy3d.org/)** · [Embedding guide](EMBEDDING.md) · [Game design](DESIGN.md)
 
-**Deployment status:** GitHub Pages is not live yet. The `ashintop.github.io` links in this document are intended deployment addresses. Use the local-run instructions until the hosted game has been published and verified.
+**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
 
-[Video player and transcript (deployment target)](https://ashintop.github.io/halloween-mirror-hearts/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+[Video player and transcript](https://halloween-mirror-hearts.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
 
 ![Moonlit Mirrors: two illustrated Halloween ghost rooms, shared movement controls, and a switchable moon mirror](docs/images/gameplay.jpg)
 
@@ -28,6 +28,7 @@ Both ghosts must stand at their own heart doors at the same time. There is no co
 - A breadth-first solver that finds the shortest route from your current position, rather than replaying a canned opening.
 - Unlimited undo and restart, room selection, shareable room links, and local best move counts.
 - One-to-three-star results based on each room’s verified shortest solution.
+- A little reunion after every solved room: Luna and Rose float together, wrap their arms around each other, and share a gentle cheek kiss before settling into an embrace. Their original star and bow stay with them.
 - Touch buttons, adjacent-tile tapping, and keyboard controls; English and Simplified Chinese; optional synthesized sound and reduced-motion support.
 - Original SVG ghosts and scenery, with no external art, framework, CDN, account, or backend.
 
@@ -41,6 +42,10 @@ Both ghosts must stand at their own heart doors at the same time. There is no co
 6. Bring both ghosts to their own heart doors simultaneously.
 
 The **Perfect** number is the verified minimum from that room’s starting position. Finish at that number for three stars, within 1.5 times that number rounded up for two, or at any other move count for one. Hints do not reduce stars.
+
+### A hug at the end of the mirror
+
+When both ghosts reach home, the result card plays a **2.8-second original SVG reunion**: they float inward, lean together, hug, and share a small kiss with a rising heart. The scene ends in a quiet embrace. The next-room and close buttons work throughout, so there is no waiting before continuing. With reduced motion enabled, the same scene appears as a still embrace. This celebration does not change the move count, stars, hints, or room rules.
 
 ## Controls
 
@@ -69,7 +74,7 @@ The shortest starting solutions are **4, 8, 11, 12, 15, 17, 11, 12, 17, 16, 17, 
 
 Best completed-room move counts, language, and sound preference are saved in browser storage. There is no cloud synchronization. Reloading starts the selected room again; individual unfinished moves are not resumed.
 
-A link such as [`#room=9`](https://ashintop.github.io/halloween-mirror-hearts/#room=9) opens the ninth room from its beginning. Sharing copies that link rather than uploading a replay or any personal information. If clipboard access is unavailable, the game displays a manually copyable link.
+A link such as [`#room=9`](https://halloween-mirror-hearts.crazy3d.org/#room=9) opens the ninth room from its beginning. Sharing copies that link rather than uploading a replay or any personal information. If clipboard access is unavailable, the game displays a manually copyable link.
 
 ## Compact-player walkthrough
 
@@ -83,7 +88,7 @@ Watch both rooms while using the shared direction buttons. Small board cells are
 
 ```html
 <iframe
-  src="https://ashintop.github.io/halloween-mirror-hearts/"
+  src="https://halloween-mirror-hearts.crazy3d.org/"
   title="Moonlit Mirrors — Halloween mirror puzzle"
   style="display:block;width:100%;height:521px;border:0"
   allow="fullscreen"
@@ -137,12 +142,12 @@ The game code has no analytics, login, external asset requests, remote API, or a
 
 | Game | Try next |
 |---|---|
-| [Haunted Hearts](https://github.com/AshinTop/halloween-love-game) | Switch between two ghosts, open pressure gates, and pass a lantern. |
-| [Ghost Lanterns 3D](https://github.com/AshinTop/halloween-3d) | Light a three-dimensional pumpkin grid with linked-lantern puzzles. |
-| [Pumpkin Shift](https://github.com/AshinTop/halloween-pumpkin-shift) | Slide numbered tiles through a Halloween puzzle. |
-| [Witch’s Potion Match](https://github.com/AshinTop/halloween-potion-match) | Match ingredients and light candles across twelve recipes. |
+| [Haunted Hearts](https://halloween-love-game.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-love-game) | Switch between two ghosts, open pressure gates, and pass a lantern. |
+| [Ghost Lanterns 3D](https://halloween-3d.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-3d) | Light a three-dimensional pumpkin grid with linked-lantern puzzles. |
+| [Pumpkin Shift](https://halloween-pumpkin-shift.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-pumpkin-shift) | Slide numbered tiles through a Halloween puzzle. |
+| [Witch’s Potion Match](https://halloween-potion-match.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-potion-match) | Match ingredients and light candles across twelve recipes. |
 
-**简体中文：**《月镜双影》有 12 组双房间谜题。两只幽灵同步移动，左右镜像；后续加入共享钥匙和镜像／同向切换。所有关卡均有最短路线验证，支持无限撤销、真实提示与中英文切换。
+**简体中文：**《月镜双影》有 12 组双房间谜题。两只幽灵同步移动，左右镜像；后续加入共享钥匙和镜像／同向切换。所有关卡均有最短路线验证，支持无限撤销、真实提示与中英文切换。通关后，Luna 和 Rose 会靠近、拥抱并轻轻亲吻，最后依偎在一起；2.8 秒的小动画可以随时跳过，减少动态效果时显示静态拥抱。
 
 ## Creation credits
 
